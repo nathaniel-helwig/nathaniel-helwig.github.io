@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathaniel E. Helwig | Software</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --primary-accent: #0056b3;
+            --nav-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Improved Skip Link - totally hidden until Tabbed into */
+        .skip-link {
+            position: absolute;
+            top: -100px; /* Moved further up */
+            left: -1000px; /* Moved far to the left */
+            background: var(--primary-accent);
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            text-decoration: none;
+            transition: top 0.2s; /* Smooth slide-down effect */
+        }
+
+        /* Brings it into view ONLY when the user presses the Tab key */
+        .skip-link:focus {
+            top: 0;
+            left: 0;
+        }
+
+        header {
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 0;
+        }
+
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-accent);
+            font-weight: bold;
+        }
+
+        nav a:hover, nav a:focus {
+            text-decoration: underline;
+            outline: 3px solid var(--primary-accent);
+            outline-offset: 4px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section { margin-bottom: 2.5rem; }
+        h1, h2 { color: var(--primary-accent); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #dee2e6;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <nav aria-label="Main Navigation">
+            <div class="logo"><strong>Professor Nathaniel E. Helwig</strong></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Software Development</h1>
+        
+        <section aria-labelledby="software-impact">
+<!--            <h2 id="figures-heading">Software Impact</h2>-->
+        
+        <div class="w3-display-container mySlides" style="text-align: center;">
+            <img src="pics/helwig_downloads.png" alt="Nathaniel E. Helwig's CRAN downloads by year." style="width:100%">
+         </div>
+        
+        </section>
+
+        <section aria-labelledby="big-data">
+            <h2 id="big-data">Big and High-Dimensional Data</h2>
+            
+            <ul>
+                <li> Helwig NE (2026). grpnet: Group Elastic Net Regularized GLMs and GAMs. DOI: <a href="https://doi.org/10.32614/CRAN.package.grpnet">10.32614/CRAN.package.grpnet </a> </li>
+                <li> Helwig NE (2018). bigsplines: Smoothing Splines for Large Samples. DOI: <a href="https://doi.org/10.32614/CRAN.package.bigsplines">10.32614/CRAN.package.bigsplines </a> </li>
+            </ul>
+            
+        </section>
+
+        <section aria-labelledby="nonparametric">
+            <h2 id="nonparametric">Nonparametric Regression and Inference</h2>
+            
+            <ul>
+                <li> Helwig NE (2026). npreg: Nonparametric Regression via Smoothing Splines.
+                    DOI: <a href="https://doi.org/10.32614/CRAN.package.npreg">10.32614/CRAN.package.npreg </a> </li>
+                <li> Helwig NE (2026). nptest: Nonparametric Bootstrap and Permutation Tests.
+                    DOI: <a href="https://doi.org/10.32614/CRAN.package.nptest">10.32614/CRAN.package.nptest </a> </li>
+                <li> Helwig NE (2025). gammi: Generalized Additive Mixed Model Interface.  DOI: <a href="https://doi.org/10.32614/CRAN.package.gammi">10.32614/CRAN.package.gammi </a> </li>
+            </ul>
+            
+        </section>
+        
+        
+        <section aria-labelledby="multivar-tensor">
+            <h2 id="multivar-tensor">Multivariate and Tensor Analysis</h2>
+            
+            <ul>
+                <li> Helwig NE (2025). multiway: Component Models for Multi-Way Data. DOI: <a href="https://doi.org/10.32614/CRAN.package.multiway">10.32614/CRAN.package.multiway </a> </li>
+                <li> Helwig NE (2022). ica: Independent Component Analysis. DOI: <a href="https://doi.org/10.32614/CRAN.package.ica">10.32614/CRAN.package.ica </a> </li>
+            </ul>
+            
+        </section>
+
+        <section aria-labelledby="const-optim">
+            <h2 id="const-optim">Constrained Multivariate Optimization</h2>
+            
+            <ul>
+                <li> Helwig NE (2025). CMLS: Constrained Multivariate Least Squares. DOI: <a href="https://doi.org/10.32614/CRAN.package.CMLS">10.32614/CRAN.package.CMLS </a> </li>
+                <li> Helwig NE (2018). Dykstra: Quadratic Programming using Cyclic Projections. DOI: <a href="https://doi.org/10.32614/CRAN.package.Dykstra">10.32614/CRAN.package.Dykstra </a> </li>
+            </ul>
+            
+        </section>
+        
+        
+        <section aria-labelledby="eeg-toolkit">
+            <h2 id="eeg-toolkit">Electroencephalography (EEG) Toolkit</h2>
+            
+            <ul>
+                <li> Helwig NE (2025). eegkit: Toolkit for Electroencephalography Data. DOI: <a href="https://doi.org/10.32614/CRAN.package.eegkit">10.32614/CRAN.package.eegkit </a> </li>
+                <li> Helwig NE (2022). eegkitdata: Electroencephalography Toolkit Datasets. DOI: <a href="https://doi.org/10.32614/CRAN.package.eegkitdata">10.32614/CRAN.package.eegkitdata </a> </li>
+            </ul>
+            
+        </section>
+        
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Nathaniel E. Helwig. Built with accessibility in mind.</p>
+    </footer>
+
+</body>
+</html>
