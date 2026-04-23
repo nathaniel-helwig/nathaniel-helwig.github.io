@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathaniel E. Helwig | Homepage</title>
+    <style>
+        /* Modern, accessible color palette */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --primary-accent: #0056b3; /* High contrast blue */
+            --nav-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Improved Skip Link - totally hidden until Tabbed into */
+        .skip-link {
+            position: absolute;
+            top: -100px; /* Moved further up */
+            left: -1000px; /* Moved far to the left */
+            background: var(--primary-accent);
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            text-decoration: none;
+            transition: top 0.2s; /* Smooth slide-down effect */
+        }
+
+        /* Brings it into view ONLY when the user presses the Tab key */
+        .skip-link:focus {
+            top: 0;
+            left: 0;
+        }
+
+        header {
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 0;
+        }
+
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-accent);
+            font-weight: bold;
+        }
+
+        nav a:hover, nav a:focus {
+            text-decoration: underline;
+            outline: 3px solid var(--primary-accent);
+            outline-offset: 4px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        section { margin-bottom: 2.5rem; }
+        h1, h2 { color: var(--primary-accent); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #dee2e6;
+            margin-top: 4rem;
+        }
+        
+        .profile-container {
+                text-align: center;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+
+        .profile-pic {
+            /* Critical for Firefox: ensures the image behaves as a block-level container */
+            display: block;
+            margin: 0 auto; /* Centers the image since it's now a block */
+
+            /* Sizing */
+            width: 180px;
+            height: 180px;
+
+            /* The 'Circular' look */
+            border-radius: 50%;
+            
+            /* Ensures the image doesn't stretch */
+            object-fit: cover;
+            
+            /* Visual styling */
+            border: 4px solid var(--nav-bg);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+            /* Firefox Fix: ensures the overflow is actually hidden by the border-radius */
+            overflow: hidden;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <nav aria-label="Main Navigation">
+            <div class="logo"><strong>Professor Nathaniel E. Helwig</strong></div>
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div class="profile-container">
+                <img src="neh2025.png" alt="Headshot of Nathaniel E. Helwig from Sep 14, 2025." class="profile-pic">
+            </div>
+        
+        <section>
+            <h1>Professor Nathaniel E. Helwig's Homepage</h1>
+            <p>
+            I am a tenured Associate Professor with a 50/50 joint appointment in <a href="https://cla.umn.edu/psychology">Psychology</a> and <a href="https://cla.umn.edu/statistics">Statistics</a> at the <a href="https://twin-cities.umn.edu/">University of Minnesota, Twin Cities</a>. I also hold a graduate faculty appointment in <a href="https://cse.umn.edu/datascience">Data Science</a>, and I am a "Core Member" of the University of Minnesota's <a href="https://dsai-hub.umn.edu/">Data Science and AI Hub</a>. I have research interests in artificial intelligence, computational statistics, machine learning, and multivariate nonparametric methods with a focus on applications in the psychological and biomedical sciences. My papers and open-source software, which are inspired by my collaborations, strive to solve general methodological and computational problems in ways that work both in theory and in practice—when the data are messy.
+            </p>
+        </section>
+
+        <section aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Table of Contents</h2>
+            <p>This GitHub repo contains details on the following:</p>
+            <ul>
+                <li><strong>About:</strong> Background and Contact.</li>
+                <li><strong>Contribute:</strong> Collaborate, Donate, Volunteer.</li>
+                <li><strong>Research:</strong> Publications, Software, Talks.</li>
+                <li><strong>Teaching:</strong> Intro, Applied, Multivariate, Nonparametric.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Nathaniel E. Helwig. Built with accessibility in mind.</p>
+    </footer>
+
+</body>
+</html>
