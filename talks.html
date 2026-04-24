@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathaniel E. Helwig | Talks</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --primary-accent: #0056b3;
+            --nav-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Improved Skip Link - totally hidden until Tabbed into */
+        .skip-link {
+            position: absolute;
+            top: -100px; /* Moved further up */
+            left: -1000px; /* Moved far to the left */
+            background: var(--primary-accent);
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            text-decoration: none;
+            transition: top 0.2s; /* Smooth slide-down effect */
+        }
+
+        /* Brings it into view ONLY when the user presses the Tab key */
+        .skip-link:focus {
+            top: 0;
+            left: 0;
+        }
+
+        header {
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 0;
+        }
+
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-accent);
+            font-weight: bold;
+        }
+
+        nav a:hover, nav a:focus {
+            text-decoration: underline;
+            outline: 3px solid var(--primary-accent);
+            outline-offset: 4px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section { margin-bottom: 2.5rem; }
+        h1, h2 { color: var(--primary-accent); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #dee2e6;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <nav aria-label="Main Navigation">
+            <div class="logo"><strong>Professor Nathaniel E. Helwig</strong></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Talks and Posters</h1>
+        
+        
+        <section aria-labelledby="seminars-and-workshops">
+            <h2 id="seminars-and-workshops">Seminar and Workshop Talks</h2>
+            <ol reversed>
+                <li><strong>Helwig, N. E.</strong> (2025, December 3). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2025_GenAI.pdf"><em>Improving science via artificial intelligence. Part 1: introduction to GenAI and LLMs</em></a>. Quantitative and Psychometric Methods Seminar, University of Minnesota, Minneapolis, MN, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2025, November 12). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2025_software.pdf"><em>Developing open-source software</em></a>. Quantitative and Psychometric Methods Seminar, University of Minnesota, Minneapolis, MN, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2025, October 13). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2025_GBB.pdf"><em>High-dimensional classification and regression of psychological data</em></a>. Genes, Brains, and Behavior Seminar, University of Minnesota, Minneapolis, MN, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2024, Oct. 8). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2024_QPM.pdf"><em>Model selection and smoothing in generalized nonparametric regression</em></a>. Quantitative and Psychometric Methods Seminar, University of Minnesota, Minneapolis, MN, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2023, Sep. 13). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2023_SoS.pdf"><em>Model selection and smoothing in generalized nonparametric regression</em></a>. School of Statistics Seminar, University of Minnesota, Minneapolis, MN, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2021, Apr. 23). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2021_UCF.pdf"><em>Spectrally sparse nonparametric regression via elastic net regularized smoothers</em></a>. Statistics &amp; Data Science Colloquium Series. University of Central Florida, Orlando, Florida, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2021, Apr. 5). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2021_Vanderbilt.pdf"><em>Exploring latent brain networks via simultaneous component analysis</em></a>. Quantitative Methods Colloquium, Vanderbilt University. Nashville, Tennessee, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2020, Sep. 28). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2020_covid.pdf"><em>Modeling COVID-19 Trends in the United States</em></a>. Psychology 1010 Guest Lecture, Department of Psychology, University of Minnesota.</li>
+                <li><strong>Helwig, N. E.</strong> (2019, Mar. 8). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2019_ReproducibleCode.html"><em>Reproducible data wrangling and modeling with R</em></a>. Department of Psychology Open and Reproducible Science Brown Bag Series. University of Minnesota.</li>
+                <li><strong>Helwig, N. E.</strong> (2019, February 13). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2019_SnPM.pdf"><em>Statistical Nonparametric Mapping: Multivariate Permutation Tests for Location, Correlation, and Regression Problems in Neuroimaging</em></a>. Quantitative and Psychometric Methods Seminar, University of Minnesota, Minneapolis, MN, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2018, Aug. 16). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2018_LinearRegressionR.html"><em>Linear regression in R</em></a>. Institute for Research in Statistics and its Applications Reproducible Research Workshop, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2018, Aug. 16). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2018_SimpleStatisticsR.html"><em>Simple statistics in R</em></a>. Institute for Research in Statistics and its Applications Reproducible Research Workshop, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2017, Oct. 10). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2017_lme4-and-beyond.pdf"><em>lme4 and Beyond</em></a>. Institute for Research in Statistics and its Applications Mixed Models Workshop, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong>, &amp; Snodgress, M. A. (2017, Sep. 21). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2017_IRSA2.pdf"><em>Discovering genuine resting state brain networks via simultaneous component analysis</em></a>. Institute for Research in Statistics and its Applications Neuro-Statistics Workshop, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2017, Aug. 31). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2017_LinearRegressionR.html"><em>Linear regression in R</em></a>. Institute for Research in Statistics and its Applications Reproducible Research Workshop, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2017, Aug. 31). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2017_SimpleStatisticsR.html"><em>Simple statistics in R</em></a>. Institute for Research in Statistics and its Applications Reproducible Research Workshop, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong>, Harper, J., Malone, S., &amp; Iacono, W. (2017, May 6). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2017_IRSA1.pdf"><em>Modeling longitudinal change in brain signals of twins</em></a>. Institute for Research in Statistics and its Applications Neuro-Statistics Workshop, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2016, Apr. 12). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2016_MUG.pdf"><em>Reproducible Research: A Valid Concept?</em></a>. MRI Users Group Seminar, University of Minnesota, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2016, Mar. 21). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2016_IO.pdf"><em>Penalized Regression for Psychological Data</em></a>. Industrial/Organizational Psychology Seminar, University of Minnesota, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2016, Feb. 25). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2016_ICD.pdf"><em>Making Sense of Psychological Data via Functions and Factors</em></a>. Institute of Child Development Seminar, University of Minnesota, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2015, June 10). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2015_VA.pdf"><em>Data-driven neuroimaging analysis</em></a>. Brain Sciences Center, United States Department of Veterans Affairs, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2015, Apr. 15). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2015_ICID.pdf"><em>Data-driven neuroimaging analysis</em></a>. April Meeting of the ICID Group, University of Minnesota, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2014, Nov. 13). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2014_IWG.pdf"><em>Tensor analysis of fMRI data</em></a>. November Meeting of the Imaging Working Group, University of Minnesota, Minneapolis, Minnesota, USA.</li>
+                <li><strong>Helwig, N. E.</strong> (2014, May 29). <a href="https://github.com/nathaniel-helwig/seminar-talks/blob/main/Helwig_2014_BigR.pdf"><em>Semiparametric regression of big data in R</em></a>. Computational Science and Engineering Big Data Workshop, University of Illinois, Urbana, Illinois, USA.</li>
+            </ol>
+        </section>
+        
+        <section aria-labelledby="conference-talks">
+        <h2 id="conference-talks">Conference Talks</h2>
+        <ol reversed>
+            <li>Duffy, K. A., &amp; <strong>Helwig, N. E.</strong> (2025, July 16). <a href="http://stat.umn.edu/~helwig/talks/Duffy+Helwig_imps2025.pdf"><em>Predicting attention problems from brain
+                connectivity using high-dimensional Poisson regression</em></a>. International Meeting of the Psychometric Society, University of Minnesota, Minneapolis, MN, USA.</li>
+            <li>Lee, J. W., &amp; <strong>Helwig, N. E.</strong> (2025, July 16). <a href="http://stat.umn.edu/~helwig/talks/Lee+Helwig_imps2025.pdf"><em>Classifying alcoholism from electroencephalography data using high-dimensional penalized regression</em></a>. International Meeting of the Psychometric Society, University of Minnesota, Minneapolis, MN, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2025, July 16). <a href="http://stat.umn.edu/~helwig/talks/Helwig_imps2025.pdf"><em>Group elastic net regression: a framework for high-dimensional regression and classification of psychological data</em></a>. International Meeting of the Psychometric Society, University of Minnesota, Minneapolis, MN, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2025, June 18). <em>Model selection and smoothing in generalized nonparametric regression</em>. Data and AI Intensive Research with Rigor and Reproducibility, University of Texas at San Antonio, San Antonio, TX, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2021, June 25). <em>Statistical learning via spectrally sparse smoothers</em>. 4th International Conference on Econometrics and Statistics. Virtual Conference, Hong Kong University of Science and Technology, Hong Kong.</li>
+            <li>Almquist, Z. W., <strong>Helwig, N. E.</strong>, &amp; You, Y. (2018, Aug. 12). <em>Connecting HUD continuum of care point-in-time homeless counts to US census geographies: 2005-2016</em>. American Sociological Association Annual Meeting, Philadelphia, Pennsylvania, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2018, Aug. 4). <em>Statistical learning of successful smiles</em>. Joint Statistical Meetings, Vancouver, British Columbia, Canada.</li>
+            <li><strong>Helwig, N. E.</strong>, &amp; Ma, P. (2018, June 19). <em> Smoothing spline ANOVA for super-large samples: Scalable computation via rounding parameters</em>. ICSA Applied Statistics Symposium, New Brunswick, New Jersey, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2018, June 13). <em>Constrained Parallel Factor Analysis with applications to functional data</em>. ThRee-way methods In Chemistry And Psychology (TRICAP) Conference, Angel Fire, New Mexico, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2017, Oct. 9). <em>Statistical learning of successful smiles</em>. Third Annual Twin Cities American Statistical Association Fall Research Conference, University of St. Thomas, Minneapolis, Minnesota, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2017, July 31). <em>Multiway factor analysis with functional and structural constraints</em>. Joint Statistical Meetings, Baltimore, Maryland, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2017, July 18). <em>Multiway factor analysis with functional and structural constraints</em>. International Meeting of the Psychometric Society, University of Zurich, Zurich, Switzerland.</li>
+            <li><strong>Helwig, N. E.</strong> (2017, May 23). <em>Estimating latent trends in multivariate longitudinal data via Parafac2 with functional and structural constraints</em>. Modern Modeling Methods Conference, Storrs, Connecticut, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2017, Feb. 25). <em>Nonparametric mixed-effects regression for large samples</em>. Conference on Statistical Practice, Jacksonville, Florida, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2016, Dec. 10). <em>Efficient estimation of variance components in nonparametric mixed-effects models with large samples</em>. 9th International Conference of the ERCIM WG on Computational and Methodological Statistics, European Consortium for Informatics and Mathematics, University of Seville, Seville, Spain.</li>
+            <li><strong>Helwig, N. E.</strong> (2016, July 31). <em>Nonparametric spatiotemporal analysis of neuroimaging data</em>. Joint Statistical Meetings, Chicago, Illinois, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2016, July 12). <em>Nonparametric mixed-effects models for psychological data</em>. International Meeting of the Psychometric Society, Asheville, North Carolina, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2016, May 25). <em>Efficient estimation of variance components in nonparametric mixed-effects models with large samples</em>. Modern Modeling Methods Conference, Storrs, Connecticut, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2015, Aug. 6). <em>Smoothing splines for large samples</em>. Institute of Mathematical Statistics New Researchers Conference, Seattle, Washington, USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2014, Aug. 9). <em>Fast and stable smoothing spline analysis of variance models for large samples with applications to electroencephalography data analysis</em>. American Psychological Association Annual Convention, Washington D.C., USA.</li>
+            <li><strong>Helwig, N. E.</strong> (2014, Aug. 4). <em>Smoothing spline analysis of variance models for electroencephalography data analysis</em>. Joint Statistical Meetings, Boston, Massachusetts, USA.</li>
+            <li><strong>Helwig, N. E.</strong>, &amp; Ma, P. (2013, Aug. 6). <em>Fast and stable multiple smoothing parameter selection in smoothing spline analysis of variance models with large samples.</em> Joint Statistical Meetings, Montreal, Quebec, Canada.</li>
+            <li><strong>Helwig, N. E.</strong>, &amp; Hong, S. (2009, June 18). <em>Parallel factor analysis of gait data</em>. Three-way Methods in Chemistry and Psychology, Vall de Nuria, Spain.</li>
+        </ol>
+        </section>
+        
+        <section aria-labelledby="posters">
+            <h2 id="posters">Conference Posters</h2>
+            <ul>
+                <li>Snodgress, M. A., &amp; <strong>Helwig, N. E.</strong> (2021, Oct. 16). <em>Cross-validated simultaneous component analysis for identifying individual and group differences in latent brain networks</em>. Annual Meeting of the Society for Psychophysiological Research, Virtual Meeting.</li>
+                <li>Duffy, K. A., &amp; <strong>Helwig, N. E.</strong> (2021, Sep. 17). <em>Predicting ADHD symptomatology from resting state network correlations using nonparametric smoothing spline regression</em>. Annual Meeting of the Flux Society for Developmental Cognitive Neuroscience, Virtual Meeting.</li>
+                <li>Snodgress, M. A., &amp; <strong>Helwig, N. E.</strong> (2021, Apr. 15). <em>Exploring latent brain networks with cross-validated simultaneous component analysis</em>. Spring Meeting of the Twin Cities Chapter of the American Statistical Association, Minneapolis, Minnesota, United States.</li>
+                <li>McCoy, M. E., <strong>Helwig, N. E.</strong>, &amp; Logue, C. (2019, June 27). <em>The impact of hyperbaric oxygen on treating idiopathic sudden sensorineural hearing loss</em>. Annual Scientific Meeting for the Undersea & Hyperbaric Medical Society, R&iacute;o Grande, Puerto Rico.</li>
+                <li>Malone, S., <strong>Helwig, N. E.</strong>, Harper, J., &amp; Iacono, W. (2018, Oct. 6). <em>Substance-abuse risk among adolescents is associated with increased impulsive errors and decreased theta power in a multiway analysis of NoGo EEG activity</em>. Society for Psychophysiological Research Annual Meeting, Quebec City, Quebec, Canada.</li>
+                <li>Lawrence R. L., Sessions W. C., Jensen M., Staker J. L., Eid A., Breighner R., <strong>Helwig, N. E.</strong>, Braman J. P., &amp; Ludewig P. M. (2018, Apr. 17). <em>The effect of glenohumeral plane of elevation on supraspinatus subacromial proximity</em>. University of Minnesota Supercomputing Institute Research Exhibition, Minneapolis, Minnesota, USA.</li>
+                <li>Hammell, A., <strong>Helwig, N. E.</strong>, Kaczkurkin, A., &amp; Lissek, S. (2018, Apr. 6). <em>Temporal dynamics of fear generalization in PTSD across learning trials: A nonparametric exploratory model</em>. Anxiety and Depression Association of America Annual Conference, Washington D.C., USA.</li>
+                <li>Ruprecht, M. R., &amp; <strong>Helwig, N. E.</strong> (2017, Oct. 9). <em>A nonparametric model for right-wing authoritarianism</em>. Third Annual Twin Cities American Statistical Association Fall Research Conference, University of St. Thomas, Minneapolis, Minnesota, USA.</li>
+                <li>Jordan, V. A., McCoy, M. E., <strong>Helwig, N. E.</strong>, &amp; Odland, R. (2017, Sep. 12). <em>Treatment outcomes of idiopathic sudden sensorineural hearing loss</em>. American Academy of Otolaryngology-Head and Neck Surgery Foundation (AAO-HNSF) Annual Meeting, Chicago, Illinois, USA.</li>
+                <li>Ruprecht, M. R., &amp; <strong>Helwig, N. E.</strong> (2017, July 20). <em>A nonparametric look at self-esteem development by gender and socioeconomic region</em>. Pipelines into Biostatistics Symposium, Harvard University, Boston, Massachusetts, USA.</li>
+                <li>Ruprecht, M. R., &amp; <strong>Helwig, N. E.</strong> (2017, Apr. 20). <em>A nonparametric model for right-wing authoritarianism</em>. Undergraduate Research Opportunities Program Showcase, University of Minnesota, Minneapolis, Minnesota, USA.</li>
+                <li>Ruprecht, M. R., &amp; <strong>Helwig, N. E.</strong> (2017, Apr. 18). <em>A nonparametric model for right-wing authoritarianism</em>. Undergraduate Research Opportunities Program Showcase, University of Minnesota, Duluth, Minnesota, USA.</li>
+                <li>Mervis, J., <strong>Helwig, N. E.</strong>, Meyer-Kalos, P., &amp; MacDonald, A. (2017, Mar. 27). <em>The mismeasurement of psychosis: parsing differences in discriminating power across symptom dimensions</em>. 16th International Congress on Schizophrenia Research, San Diego, California, USA.</li>
+                <li>Ruprecht, M. R., &amp; <strong>Helwig, N. E.</strong> (2016, Nov. 18). <em>The determination of an effective smile</em>. Undergraduate Research Opportunities Program Showcase, University of Minnesota, Minneapolis, Minnesota, USA.</li>
+                <li>Ruprecht, M. R., &amp; <strong>Helwig, N. E.</strong> (2016, Oct. 3). <em>The determination of an effective smile</em>. Second Annual Twin Cities American Statistical Association Fall Research Conference, Medtronic Campus, Mounds View, Minnesota, USA. <font color="red">[Winning Poster]</font></li>
+                <li><strong>Helwig, N. E.</strong> (2016, Sep. 24). <em>Smoothing spline ANOVA models for analyzing event-related potential data</em>. Society for Psychophysiological Research Annual Meeting, Minneapolis, Minnesota, USA.</li>
+                <li>Ruprecht, M. R., &amp; <strong>Helwig, N. E.</strong> (2016, Apr. 29). <em>A nonparametric look at self-esteem development by gender and socioeconomic region</em>. Undergraduate Research Opportunities Program Showcase, University of Minnesota, Minneapolis, Minnesota, USA.</li>
+                <li>Ruprecht, M. R., &amp; <strong>Helwig, N. E.</strong> (2016, Apr. 23). <em>A nonparametric look at self-esteem development by gender and socioeconomic region</em>. Minnesota Undergraduate Psychology Conference, Augsburg College, Minneapolis, Minnesota, USA.</li>
+                <li>Ruprecht, M. R., &amp; <strong>Helwig, N. E.</strong> (2016, Apr. 14). <em>The determination of an effective smile</em>. Undergraduate Research Opportunities Program Showcase, University of Minnesota, Duluth, Minnesota, USA.</li>
+                <li>Ruprecht, M. R., &amp; <strong>Helwig, N. E.</strong> (2015, Nov. 17). <em>A nonparametric look at self-esteem development</em>. Undergraduate Research Opportunities Program Showcase, University of Minnesota, Duluth, Minnesota, USA. <font color="red">[Winning Poster]</font></li>
+                <li>Ruprecht, M. R., &amp; <strong>Helwig, N. E.</strong> (2015, Oct. 30). <em>A nonparametric look at self-esteem development</em>. First Annual Twin Cities American Statistical Association Fall Research Conference, Mayo Clinic, Rochester, Minnesota, USA. <font color="red">[Winning Poster]</font></li>
+                <li><strong>Helwig, N. E.</strong> (2013, Apr. 24-25). <em>A look into the mind of an alcoholic: Smoothing spline models for EEG data analysis.</em> Computational Science and Engineering Annual Meeting, University of Illinois, Urbana, Illinois, USA.</li>
+                <li>Hsiao-Wecksler, E. T., Dankowicz, H., Hong, S., Lague, M. R., Polk, J. D., Rosengren, K. S., DiBerardino, L. A., III, <strong>Helwig, N. E.</strong>, &amp; Park, K. (2009, Jan. 4-7). <em>Quantitative characterization of complex motion patterns using shaped-based and multivariate techniques.</em> National Science Foundation (NSF) Civil, Mechanical and Manufacturing Innovation (CMMI) Research Innovation Conference, Atlanta, Georgia, USA.</li>
+                <li><strong>Helwig, N. E.</strong>, Hong, S., Polk, J. D., &amp; Lague, M. R. (2010, Aug. 18-21). <em>Analysis of gait cycle shapes using parallel factor analysis.</em> Annual Meeting for the American Society of Biomechanics, Providence, Rhode Island, USA.</li>
+                <li><strong>Helwig, N. E.</strong>, Hong, S., &amp; Hsiao-Wecksler, E. T. (2009, Aug. 26-29). <em>Partitioning gait data into temporal and intensity differences.</em> Annual Meeting for the American Society of Biomechanics, State College, Pennsylvania, USA.</li>
+                <li><strong>Helwig, N. E.</strong>, Hong, S., &amp; Hsiao-Wecksler, E. T. (2009, Aug. 26-29). <em>Methods to time-normalize gait cycle data.</em> Annual Meeting for the American Society of Biomechanics, State College, Pennsylvania, USA.</li>
+                <li>Hsiao-Wecksler, E. T., Dankowicz, H., Hong, S., Lague, M. R., Polk, J. D., Rosengren, K. S., DiBerardino, L. A., III, <strong>Helwig, N. E.</strong>, &amp; Park, K. (2009, June 22-25). <em>Quantitative characterization of complex motion patterns using shaped-based and multivariate techniques.</em> National Science Foundation (NSF) Civil, Mechanical and Manufacturing Innovation (CMMI) Research Innovation Conference, Honolulu, Hawaii, USA.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Nathaniel E. Helwig. Built with accessibility in mind.</p>
+    </footer>
+
+</body>
+</html>
