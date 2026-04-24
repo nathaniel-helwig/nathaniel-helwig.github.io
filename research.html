@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathaniel E. Helwig | Research</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --primary-accent: #0056b3;
+            --nav-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Improved Skip Link - totally hidden until Tabbed into */
+        .skip-link {
+            position: absolute;
+            top: -100px; /* Moved further up */
+            left: -1000px; /* Moved far to the left */
+            background: var(--primary-accent);
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            text-decoration: none;
+            transition: top 0.2s; /* Smooth slide-down effect */
+        }
+
+        /* Brings it into view ONLY when the user presses the Tab key */
+        .skip-link:focus {
+            top: 0;
+            left: 0;
+        }
+
+        header {
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 0;
+        }
+
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-accent);
+            font-weight: bold;
+        }
+
+        nav a:hover, nav a:focus {
+            text-decoration: underline;
+            outline: 3px solid var(--primary-accent);
+            outline-offset: 4px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section { margin-bottom: 2.5rem; }
+        h1, h2 { color: var(--primary-accent); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #dee2e6;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+        
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .mySlides img {
+            /* Set the fixed height you want for the slideshow area */
+            height: 300px;
+            
+            /* Ensures the image fills the area without stretching */
+            /* 'contain' shows the whole image with possible bars on the side */
+            /* 'cover' fills the whole area but might crop the edges */
+            object-fit: contain;
+            
+            /* Background color helps if images are 'contained' with empty space */
+            background-color: #f8f9fa;
+            
+            width: 100%;
+            display: block;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgba(0,0,0,0.5);
+            border: none;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next { right: 0; border-radius: 3px 0 0 3px; }
+
+        .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+        .caption {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        
+        #pause-btn {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: 1px solid white;
+            padding: 5px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            z-index: 10;
+        }
+
+        #pause-btn:hover, #pause-btn:focus {
+            background: rgba(0, 0, 0, 0.9);
+            outline: 2px solid var(--primary-accent);
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <nav aria-label="Main Navigation">
+            <div class="logo"><strong>Professor Nathaniel E. Helwig</strong></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+                <li><a href="research.html" aria-current="page">Research</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Research Portfolio</h1>
+        
+        
+<!--        <section aria-labelledby="figures-heading">-->
+<!--            <h2 id="figures-heading">Graphical Highlights</h2>-->
+<!--            -->
+<!--            <div class="slideshow-container" role="region" aria-roledescription="carousel" aria-label="Research Graphics">-->
+<!--                -->
+<!--                <div class="mySlides fade">-->
+<!--                    <img src="http://users.stat.umn.edu/~helwig/research/grpnet-cvm.png" height="600" alt="Cross-validation error curves." style="width:100%">-->
+<!--                    <div class="caption">Figure 1: Multilevel Multinomial Regression Performance</div>-->
+<!--                </div>-->
+<!---->
+<!--                <div class="mySlides fade">-->
+<!--                    <img src="http://users.stat.umn.edu/~helwig/research/nptest.png" alt="Permutation distributions." style="width:100%">-->
+<!--                    <div class="caption">Figure 2: Facial Health Prediction Trends</div>-->
+<!--                </div>-->
+<!---->
+<!--                <button class="prev" onclick="plusSlides(-1)" aria-label="Previous Slide">&#10094;</button>-->
+<!--                <button class="next" onclick="plusSlides(1)" aria-label="Next Slide">&#10095;</button>-->
+<!---->
+<!--                <button id="pause-btn" onclick="togglePause()" aria-label="Pause slideshow">-->
+<!--                    <span id="pause-icon">Pause</span>-->
+<!--                </button>-->
+<!--            </div>-->
+            
+<!--            <div class="w3-content w3-display-container" style="text-align: center;">-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> High-Dimensional and Penalized Regression</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/grpnet-cvm.png" height="600" alt="Cross-validation error curves." style="width:80%">-->
+<!--             </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Robust Nonparametric Inference</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/nptest.png" alt="Permutation distributions." style="width:80%">-->
+<!--             </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Multiway Analysis and Tensor Decompositions</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/pca-parafac.png" alt="PCA and PARAFAC models." style="width:80%">-->
+<!--             </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Smoothing Splines</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/smooth-spline.png" alt="Linear and cubic smoothing splines." style="width:80%">-->
+<!--             </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Tensor Product Smoothing</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/smooth-spline2.png" alt="Tensor product cubic splines." style="width:80%">-->
+<!--             </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Non-Gaussian Data Analysis</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/nondist.png" alt="Non-normal data generating distributions." style="width:80%">-->
+<!--             </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Non-Gaussian Data Simulation</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/fleishman.png" alt="Feasible parameters for Fleishman's method." style="width:80%">-->
+<!--             </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Gait Analysis</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/gait-analysis.png" alt="Gait analysis." style="width:80%">-->
+<!--             </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Biomechanics and Locomotion</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/spine-circ.png" alt="Neck mobility." style="width:80%">-->
+<!--             </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Neuroscience (Event-Related EEG)</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/eeg-maps.png" alt="EEG data." style="width:80%">-->
+<!--             </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Neuroscience (Task-Based fMRI)</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/fmri-maps.png" alt="fMRI task based data." style="width:80%">-->
+<!--            </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Neuroscience (Resting-State fMRI)</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/fmri-rest.png" alt="fMRI resting state data." style="width:60%">-->
+<!--            </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Self-Esteem Development</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/self-esteem.png" alt="Self-esteem data." style="width:80%">-->
+<!--             </div>-->
+<!--            -->
+<!--            <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Gender Pay Gap in USA</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/paygap.png" alt="Gender pay gap data." style="width:80%">-->
+<!--             </div>-->
+<!---->
+<!--             <div class="w3-display-container mySlides">-->
+<!--                 <p> <font size="5"> Perception of Facial Expressions</font> </p>-->
+<!--                 <img src="http://users.stat.umn.edu/~helwig/research/successful-smile.png" alt="Smile perception data." style="width:80%">-->
+<!--             </div>-->
+<!--             -->
+<!--             <div class="w3-display-container mySlides">-->
+<!--                 <p> <font size="5"> Perception of Colors and Music</font> </p>-->
+<!--                 <img src="http://users.stat.umn.edu/~helwig/research/color-music.png" alt="Music perception data." style="width:80%">-->
+<!--             </div>-->
+<!---->
+<!--             <div class="w3-display-container mySlides">-->
+<!--                 <p> <font size="5"> Global Warming Trends</font> </p>-->
+<!--                 <img src="http://users.stat.umn.edu/~helwig/research/spline-select.png" alt="Global warming trends." style="width:80%">-->
+<!--              </div>-->
+<!--             -->
+<!--             <div class="w3-display-container mySlides">-->
+<!--                 <p> <font size="5"> El Nino Trends</font> </p>-->
+<!--                 <img src="http://users.stat.umn.edu/~helwig/research/elnino-temp.png" alt="El Nino spatiotemporal trends." style="width:80%">-->
+<!--              </div>-->
+<!--             -->
+<!--             <div class="w3-display-container mySlides">-->
+<!--                 <p> <font size="5"> Alcohol Consumption Trends</font> </p>-->
+<!--                 <img src="http://users.stat.umn.edu/~helwig/research/alcohol-trends.png" alt="Alcohol consumption data." style="width:80%">-->
+<!--              </div>-->
+<!--             -->
+<!--             <div class="w3-display-container mySlides">-->
+<!--                 <p> <font size="5"> United States Homelessness Trends</font> </p>-->
+<!--                 <img src="http://users.stat.umn.edu/~helwig/research/homeless.png" alt="Homelessness spatiotemporal trends." style="width:80%">-->
+<!--              </div>-->
+<!--             -->
+<!--             <div class="w3-display-container mySlides">-->
+<!--                 <p> <font size="5"> Bike Rental Trends</font> </p>-->
+<!--                 <img src="http://users.stat.umn.edu/~helwig/research/bike-rentals.png" alt="Bike renal trends." style="width:80%">-->
+<!--              </div>-->
+<!--             -->
+<!--             <div class="w3-display-container mySlides">-->
+<!--                <p> <font size="5"> Social Media Trends</font> </p>-->
+<!--                <img src="http://users.stat.umn.edu/~helwig/research/twitter-trends.png" alt="Twitter trends." style="width:80%">-->
+<!--            </div>-->
+<!--            -->
+<!--            -->
+<!--            <div style="margin: 0 auto; width: 600px; text-align: center;">-->
+<!---->
+<!--            <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">&#10094;&#10094; Prev</button>-->
+<!--            <button class="w3-button w3-light-grey" onclick="changeState(this)">PAUSE &#9208;</button>-->
+<!--            <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next &#10095;&#10095;</button>-->
+<!--            -->
+<!--            </div>-->
+<!--            -->
+<!--            </div>-->
+<!--            -->
+<!--            </div>-->
+<!--            -->
+<!--            <script>-->
+<!--                -->
+<!--                var slideIndex = 1;-->
+<!--                var t = setInterval(function () {-->
+<!--                  plusDivs(1);-->
+<!--                }, 5000);-->
+<!---->
+<!--                showDivs(slideIndex);-->
+<!--                function changeState(el) {-->
+<!--                  var text = '';-->
+<!--                  if (!t) {-->
+<!--                    t = setInterval(function () {-->
+<!--                      plusDivs(1);-->
+<!--                    }, 5000);-->
+<!--                    text = "PAUSE \u23F8";-->
+<!--                  } else {-->
+<!--                    clearInterval(t);-->
+<!--                    t = false;-->
+<!--                    text = "PLAY \u25B6";-->
+<!--                  }-->
+<!--                  el.innerText= text;-->
+<!--                }-->
+<!---->
+<!--                function plusDivs(n) {-->
+<!--                  showDivs(slideIndex += n);-->
+<!--                }-->
+<!---->
+<!--                function currentDiv(n) {-->
+<!--                  showDivs(slideIndex = n);-->
+<!--                }-->
+<!---->
+<!--                function showDivs(n) {-->
+<!--                  var i;-->
+<!--                  var x = document.getElementsByClassName("mySlides");-->
+<!--                  //var dots = document.getElementsByClassName("demo");-->
+<!--                  if (n > x.length) {-->
+<!--                    slideIndex = 1-->
+<!--                  }-->
+<!--                  if (n < 1) {-->
+<!--                    slideIndex = x.length-->
+<!--                  }-->
+<!--                  for (i = 0; i < x.length; i++) {-->
+<!--                    x[i].style.display = "none";-->
+<!--                  }-->
+<!--                  x[slideIndex - 1].style.display = "block";-->
+<!--                }-->
+<!--                -->
+<!--                -->
+<!--            </script>-->
+            
+        </section>
+        
+        
+        <section aria-labelledby="pubs-heading">
+            <h2 id="pubs-heading">Journal Publications</h2>
+            <p>A selection of my peer-reviewed journal articles:</p>
+            <ul>
+                <li><strong>Helwig, N. E.</strong>, Chen K., Guy S. J., & Lyford-Pike S. (2026) Regularized multilevel multinomial regression for select-all-that-apply responses and high-dimensional predictors with applications to perception of facial expressions. <em>Psychometrika</em> DOI: <a href="https://doi.org/10.1017/psy.2026.10102">10.1017/psy.2026.10102</a> .</li>
+                <li>Delgado, J. E., Elison, J. T., & <strong>Helwig, N. E.</strong> (2025). Robust detection of signed outliers in multivariate data with applications to early identification of risk for autism. <em>Psychological Methods</em>. DOI: <a href="https://doi.org/10.1037/met0000775">10.1037/met0000775</a> </li>
+                <li><strong>Helwig, N. E.</strong> (2025). Versatile descent algorithms for group regularization and variable selection in generalized linear models. <em>Journal of Computational and Graphical Statistics</em>. DOI: <a href="https://doi.org/10.1080/10618600.2024.2362232"> 10.1080/10618600.2024.2362232</a></li>
+                <li><strong>Helwig, N. E.</strong> (2019). Statistical nonparametric mapping: Multivariate permutation tests for location, correlation, and regression problems in neuroimaging. <em>WIREs Computational Statistics</em>. DOI: <a href="https://doi.org/10.1002/wics.1457">10.1002/wics.1457</a></li>
+            </ul>
+            
+            <p>See the <a href="publications.html">Publications</a> page for a complete list of my peer-reviewed publications.</p>
+            
+        </section>
+
+        <section aria-labelledby="software-heading">
+            <h2 id="software-heading">Software Packages</h2>
+            <p>A selection of my open-source software packages:</p>
+            <ul>
+                <li><strong>grpnet:</strong> Group Elastic Net Regularized GLMs and GAMs. DOI: <a href="https://doi.org/10.32614/CRAN.package.grpnet">10.32614/CRAN.package.grpnet</a> </li>
+                <li><strong>npreg:</strong> Nonparametric Regression via Smoothing Splines. DOI: <a href="https://doi.org/10.32614/CRAN.package.npreg">10.32614/CRAN.package.npreg</a> </li>
+                <li><strong>nptest:</strong> Nonparametric Bootstrap and Permutation Tests. DOI: <a href="https://doi.org/10.32614/CRAN.package.nptest">10.32614/CRAN.package.nptest</a> </li>
+                <li><strong>multiway:</strong> Component Models for Multi-Way Data. DOI: <a href="https://doi.org/10.32614/CRAN.package.multiway">10.32614/CRAN.package.multiway</a> </li>
+            </ul>
+            
+            <p>See the <a href="software.html">Software</a> page for a complete list of my software packages.</p>
+            
+        </section>
+        
+        
+        <section aria-labelledby="talks-heading">
+            <h2 id="talks-heading">Conference Talks</h2>
+            <p>A selection of my conference and workshop talks:</p>
+            <ul>
+                <li>Helwig, N. E. (2025, December 3). Improving science via artificial intelligence. Part 1: introduction to GenAI and LLMs. <em>Quantitative and Psychometric Methods Seminar</em>, University of Minnesota. </li>
+                <li>Helwig, N. E. (2025, November 12). Developing open-source software. <em>Quantitative and Psychometric Methods Seminar</em>, University of Minnesota. </li>
+                <li>Helwig, N. E. (2025, July 16). Group elastic net regression: a framework for high-dimensional regression and classification of psychological data. <em>International Meeting of the Psychometric Society</em>, Minneapolis, MN. </li>
+                <li>Helwig, N. E. (2019, Mar. 8). Reproducible data wrangling and modeling with R. <em>Department of Psychology Open and Reproducible Science Brown Bag Series</em>, University of Minnesota.</li>
+            </ul>
+            
+            <p>See the <a href="talks.html">Talks</a> page for a complete list of my conference talks.</p>
+            
+        </section>
+
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Nathaniel E. Helwig. Built with accessibility in mind.</p>
+    </footer>
+    
+    <script>
+    let slideIndex = 1;
+    let isPaused = false;
+    let slideInterval = setInterval(autoMove, 5000); // Change image every 5 seconds
+
+    showSlides(slideIndex);
+
+    function autoMove() {
+        if (!isPaused) {
+            plusSlides(1);
+        }
+    }
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function togglePause() {
+        const btnText = document.getElementById("pause-icon");
+        const btn = document.getElementById("pause-btn");
+        
+        isPaused = !isPaused;
+        
+        if (isPaused) {
+            btnText.innerText = "Play";
+            btn.setAttribute("aria-label", "Play slideshow");
+        } else {
+            btnText.innerText = "Pause";
+            btn.setAttribute("aria-label", "Pause slideshow");
+        }
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+    </script>
+
+</body>
+</html>
