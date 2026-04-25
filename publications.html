@@ -74,6 +74,33 @@
             outline: 3px solid var(--primary-accent);
             outline-offset: 4px;
         }
+        
+        /* Responsive Navigation for Mobile */
+        @media (max-width: 768px) {
+            nav {
+                /* Changes the logo and links from a row to a column */
+                flex-direction: column;
+                padding: 10px 0;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+                text-align: center;
+                font-size: 1.2rem; /* Slightly smaller for mobile screens */
+            }
+
+            nav ul {
+                /* Allows links to wrap nicely or stack if needed */
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px; /* Adds space between wrapped links */
+                padding: 0;
+            }
+
+            nav a {
+                padding: 5px 10px; /* Larger "tap targets" for fingers */
+            }
+        }
 
         main {
             max-width: 900px;
