@@ -110,6 +110,12 @@
 
         section { margin-bottom: 2.5rem; }
         h1, h2 { color: var(--primary-accent); }
+        
+        h2 {
+            color: var(--primary-accent);
+            margin-top: 0;
+            padding-top: 0;
+        }
 
         footer {
             text-align: center;
@@ -124,6 +130,7 @@
             grid-template-columns: 2.5fr 1fr; /* Bio takes up more space than contact info */
             gap: 40px;
             align-items: start;
+            margin-bottom: 0;   /* Removes extra space at the bottom of the grid */
         }
 
         .contact-card {
@@ -134,6 +141,13 @@
             position: sticky; /* Keep contact info visible as they scroll your bio */
             top: 20px;
         }
+        
+        .contact-card h3 {
+            margin-top: 0;
+            padding-top: 0;
+            color: var(--primary-accent);
+            font-size: 1.25rem; /* Adjusting to match H2 size if they look different */
+        }
 
         .contact-list { list-style: none; padding: 0; }
         .contact-list li { margin-bottom: 15px; }
@@ -142,13 +156,29 @@
         @media (max-width: 850px) {
             .about-grid {
                 grid-template-columns: 1fr;
+                /* Center the items in the grid (important for the fit-content box) */
+                justify-items: center;
             }
-            /* Move Contact Card to the TOP on mobile for better UX */
+
             .contact-card {
                 order: -1;
                 position: static;
                 margin-bottom: 2rem;
+
+                /* Fix: Instead of 100% width, shrink to the content */
+                width: fit-content;
+                /* Optional: add a max-width so it doesn't hit the screen edges */
+                max-width: 90%;
+                
+                /* Ensures the text inside stays left-aligned even if the box is centered */
+                text-align: left;
             }
+
+            /* Ensure the biography text still takes up full width on mobile */
+            article {
+                width: 100%;
+            }
+
             nav { flex-direction: column; }
         }
         
@@ -200,7 +230,7 @@
                 <section aria-labelledby="mission-heading">
                     <h2 id="mission-heading">Professional Focus</h2>
                     <p>
-                        My research is driven to discover how complex psychological phenomenon can be better understood using robust multivariate and nonparametric methods. I strive to make these novel computational methods accessible to the broader public and scientific community through open-source R software.
+                        My research is driven to discover how complex psychological phenomenon can be better understood using robust multivariate and nonparametric methods. I strive to make these novel computational methods accessible to the broader public and scientific community through open-source publications and software.
                         
                         
                     </p>
@@ -227,9 +257,6 @@
                 </div>
             </aside>
         </div>
-        
-        
-        
     </main>
 
     <footer role="contentinfo">
