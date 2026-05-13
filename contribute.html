@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathaniel E. Helwig | Contribute</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --primary-accent: #0056b3;
+            --nav-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Improved Skip Link - totally hidden until Tabbed into */
+        .skip-link {
+            position: absolute;
+            top: -100px; /* Moved further up */
+            left: -1000px; /* Moved far to the left */
+            background: var(--primary-accent);
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            text-decoration: none;
+            transition: top 0.2s; /* Smooth slide-down effect */
+        }
+
+        /* Brings it into view ONLY when the user presses the Tab key */
+        .skip-link:focus {
+            top: 0;
+            left: 0;
+        }
+
+        header {
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 0;
+        }
+
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-accent);
+            font-weight: bold;
+        }
+
+        nav a:hover, nav a:focus {
+            text-decoration: underline;
+            outline: 3px solid var(--primary-accent);
+            outline-offset: 4px;
+        }
+        
+        /* Responsive Navigation for Mobile */
+        @media (max-width: 768px) {
+            nav {
+                /* Changes the logo and links from a row to a column */
+                flex-direction: column;
+                padding: 10px 0;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+                text-align: center;
+                font-size: 1.2rem; /* Slightly smaller for mobile screens */
+            }
+
+            nav ul {
+                /* Allows links to wrap nicely or stack if needed */
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px; /* Adds space between wrapped links */
+                padding: 0;
+            }
+
+            nav a {
+                padding: 5px 10px; /* Larger "tap targets" for fingers */
+            }
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section { margin-bottom: 2.5rem; }
+        h1, h2 { color: var(--primary-accent); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #dee2e6;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+        
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .mySlides img {
+            /* Set the fixed height you want for the slideshow area */
+            height: 300px;
+            
+            /* Ensures the image fills the area without stretching */
+            /* 'contain' shows the whole image with possible bars on the side */
+            /* 'cover' fills the whole area but might crop the edges */
+            object-fit: contain;
+            
+            /* Background color helps if images are 'contained' with empty space */
+            background-color: #f8f9fa;
+            
+            width: 100%;
+            display: block;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgba(0,0,0,0.5);
+            border: none;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next { right: 0; border-radius: 3px 0 0 3px; }
+
+        .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+        .caption {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+        
+        #pause-btn {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: 1px solid white;
+            padding: 5px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            z-index: 10;
+        }
+
+        #pause-btn:hover, #pause-btn:focus {
+            background: rgba(0, 0, 0, 0.9);
+            outline: 2px solid var(--primary-accent);
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <nav aria-label="Main Navigation">
+            <div class="logo"><strong>Professor Nathaniel E. Helwig</strong></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contribute.html" aria-current="page">Contribute</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>You Can Contribute By...</h1>
+        
+        <section aria-labelledby="pubs-heading">
+            <h2 id="pubs-heading">Collaborating with My Lab</h2>
+            <p>Options for initiating a productive collaboration:</p>
+            <ul>
+                <li><strong>Methods:</strong>
+                 If you have methods, then I have input. I am open to finding collaborators with methodological interests in modern multivariate and nonparametric methods. Recently, I am particularly interested in machine learning (ML) and artificial intelligence (AI) methods.
+                </li>
+                <li><strong>Applications:</strong>
+                 If you have data, then I have methods. I am always looking for collaborators with interesting real data problems that require nonstandard (nonparametric) solutions. I am particularly interested in applications in psychology, medicine, economics, and sports.
+                </li>
+            </ul>
+            
+            <p>See the <a href="publications.html">Publications</a> page for examples of previous methodological and substantive collaborations.</p>
+            
+        </section>
+
+        <section aria-labelledby="software-heading">
+            <h2 id="software-heading">Donating to My Lab</h2>
+            <p>Options for making a generous donation:</p>
+            <ul>
+                <li><strong>PayPal</strong>  &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://paypal.me/NathanielHelwig">paypal.me/NathanielHelwig</a> </li>
+                <li><strong>Venmo</strong>  &nbsp; <a href="https://venmo.com/u/NathanielHelwig">venmo.com/u/NathanielHelwig</a> </li>
+                <li><strong>Cash App</strong>  &nbsp; <a href="https://cash.app/$NathanielHelwig"> cash.app/$NathanielHelwig</a> </li>
+            </ul>
+            
+            <p>Donations help support <a href="research.html">Research</a> and <a href="teaching.html">Teaching</a> efforts, including open-source <a href="publications.html">Publications</a> and <a href="software.html">Software</a>.</p>
+            
+        </section>
+        
+        
+        <section aria-labelledby="talks-heading">
+            <h2 id="talks-heading">Volunteering in My Lab</h2>
+            <p>Options for becoming a volunteer lab member:</p>
+            <ul>
+                <li> <strong>U of M Students:</strong> If you are an undergraduate or graduate student that is currently at the University of Minnesota, then I strongly encourage you to enroll in <a href="https://umtc.catalog.prod.coursedog.com/courses/7998911">PSY 5993</a> with me to obtain research experience. Interested students should email me to discuss this opportunity.  </li>
+                <li> <strong>Community Members:</strong> If you are a student at another institution (or a non-student) that is interested in getting involved in research, then reach out. I am always looking for new lab members with interests in psychology, statistics, machine learning, and artificial intelligence. </li>
+            </ul>
+            
+            <p>See the <a href="publications.html">Publications</a> page for examples of previous products from student volunteers.</p>
+            
+        </section>
+
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Nathaniel E. Helwig. Built with accessibility in mind.</p>
+    </footer>
+    
+</body>
+</html>
