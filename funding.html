@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathaniel E. Helwig | Funding</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #212529;
+            --primary-accent: #0056b3;
+            --nav-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Improved Skip Link - totally hidden until Tabbed into */
+        .skip-link {
+            position: absolute;
+            top: -100px; /* Moved further up */
+            left: -1000px; /* Moved far to the left */
+            background: var(--primary-accent);
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            text-decoration: none;
+            transition: top 0.2s; /* Smooth slide-down effect */
+        }
+
+        /* Brings it into view ONLY when the user presses the Tab key */
+        .skip-link:focus {
+            top: 0;
+            left: 0;
+        }
+
+        header {
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 0;
+        }
+
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-accent);
+            font-weight: bold;
+        }
+
+        nav a:hover, nav a:focus {
+            text-decoration: underline;
+            outline: 3px solid var(--primary-accent);
+            outline-offset: 4px;
+        }
+        
+        /* Responsive Navigation for Mobile */
+        @media (max-width: 768px) {
+            nav {
+                /* Changes the logo and links from a row to a column */
+                flex-direction: column;
+                padding: 10px 0;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+                text-align: center;
+                font-size: 1.2rem; /* Slightly smaller for mobile screens */
+            }
+
+            nav ul {
+                /* Allows links to wrap nicely or stack if needed */
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px; /* Adds space between wrapped links */
+                padding: 0;
+            }
+
+            nav a {
+                padding: 5px 10px; /* Larger "tap targets" for fingers */
+            }
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        section { margin-bottom: 2.5rem; }
+        h1, h2 { color: var(--primary-accent); }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #dee2e6;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <nav aria-label="Main Navigation">
+            <div class="logo"><strong>Professor Nathaniel E. Helwig</strong></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+                <li><a href="helwig_cv.pdf">CV</a></li>                
+                <li><a href="research.html">Research</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Grant Funding</h1>
+        
+        <section aria-labelledby="software-impact">
+        <h2 id="software-impact">Funding Impact</h2>
+        <div class="w3-display-container mySlides" style="text-align: center;">
+            <img src="pics/helwig_funding.png" alt="Nathaniel E. Helwig's grant funding by year." style="width:100%">
+         </div>
+        </section>
+
+        <section aria-labelledby="big-data">
+            <h2 id="big-data">Current Support</h2>
+            
+            <ul>
+                <li> NIH <a href="https://reporter.nih.gov/project-details/11365406">R01AR085049</a>. <em>The role of dynamic joint stability in generalized joint hypermobility. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$2,070,394</strong></span>. Dates: Sep 2026 to Aug 2031. Role: Co-Investigator. </li>
+                <li> NIH <a href="https://reporter.nih.gov/project-details/11334705"> T32DA050560</a>. <em>Training in genetic and neurobehavioral mechanisms of addiction. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$1,597,610</strong></span>. Dates: July 2026 to May 2031. Role: Co-Investigator and Mentor.  </li>
+            </ul>
+            
+        </section>
+
+        <section aria-labelledby="nonparametric">
+            <h2 id="nonparametric">Completed Support</h2>
+            
+            
+            <strong>Personalized Medicine / Adaptive Assessment</strong>
+            <ul>
+                <li> NIH <a href="https://reporter.nih.gov/project-details/10877099"> R01EY030890</a>. <em> Remapping the visual field to aid reading with central scotomas. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$1,345,583</strong></span>. Dates: July 2020 to May 2025. Role: Co-Investigator. </li>
+                <li> NIH <a href="https://reporter.nih.gov/project-details/10543058"> R01MH115046</a>. <em> Parsing early emerging heterogeneity related to autism spectrum disorder. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$2,494,039</strong></span>. Dates: Mar 2019 to Dec 2024. Role: Co-Investigator. </li>
+                <li> NIH <a href="https://reporter.nih.gov/project-details/10323851"> R43AG074740</a>. <em> Interactive software for assessing meaningful aging. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$376,278</strong></span>. Dates: Sep 2021 to Aug 2023. Role: Co-Investigator  </li>
+            </ul>
+            
+            <strong>Mechanisms of Addiction / Drug and Alcohol Use</strong>
+            <ul>
+                <li> NIH <a href="https://reporter.nih.gov/project-details/11334705"> T32DA050560</a>. <em> Training in genetic and neurobehavioral mechanisms of addiction. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$1,516,210</strong></span>. Dates: July 2020 to May 2025. Role: Co-Investigator and Mentor. </li>
+                <li>  NIH <A href="https://reporter.nih.gov/project-details/10197077"> U01DA046413</a>. <em> A twin study of adolescent alcohol and drug use development. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$1,705,000</strong></span>. Dates: Aug 2018 to June 2022. Role: Co-Investigator. </li>
+                <li>  NIH <a href="https://reporter.nih.gov/project-details/9952284"> R21AA026919</a>. <em> Neural outcomes of moderating alcohol use in early adulthood. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$477,289</strong></span>. Dates: June 2019 to May 2021. Role: Co-Investigator. </li>
+            </ul>
+            
+            <strong>Neurological Origins of Psychosis / Schizophrenia</strong>
+            <ul>
+                <li> NIH <a href="https://reporter.nih.gov/project-details/9978920"> R01MH112583</a>. <em> Perceptual mechanisms of visual hallucinations and illusions in psychosis. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$1,972,575</strong></span>. Dates: July 2017 to June 2022. Role: Co-Investigator. </li>
+                <li>  NIH <a href="https://reporter.nih.gov/project-details/9327067"> U01MH108150</a>. <em> Neural disconnection and errant visual perception in psychotic psychopathology. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$3,326,714</strong></span>. Dates: August 2016 to July 2020. Role: Consultant. </li>
+                <li>  NIH <a href="https://reporter.nih.gov/project-details/9396613"> F32MH112334</a>. <em> Investigating the role of cerebellar abnormalities in ... individuals with schizophrenia. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$408,365</strong></span>. Dates: July 2017 to June 2020. Role: Consultant </li>
+            </ul>
+
+	 <strong>Human Motion / Biomechanics</strong>
+            <ul>
+                <li> NIH <a href="https://reporter.nih.gov/project-details/9949482"> R03HD097715</a>. <em> Intersegmental dynamic mechanisms of neck pain In vivo. </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$300,000</strong></span>. Dates: June 2019 to May 2021. Role: Co-Investigator. </li>
+                <li>  <a href="https://med.umn.edu/iem">UMN IEM</a>-A142016. <em> Advancing translational musculoskeletal movement research towards ... </em> <br>
+Total Direct Costs: <span style="color: green;"><strong>$75,000</strong></span>. Dates: January 2017 to January 2018. Role: Co-Investigator.  </li>
+            </ul>
+
+            
+        </section>
+        
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Nathaniel E. Helwig. Built with accessibility in mind.</p>
+    </footer>
+
+</body>
+</html>
