@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nathaniel E. Helwig | Funding</title>
-    <style>
+<style>
+        /* Modern, accessible color palette */
         :root {
             --bg-color: #ffffff;
             --text-color: #212529;
-            --primary-accent: #0056b3;
+            --primary-accent: #0056b3; /* High contrast blue */
             --nav-bg: #f8f9fa;
         }
 
@@ -43,30 +44,64 @@
         header {
             background-color: var(--nav-bg);
             border-bottom: 1px solid #dee2e6;
-            padding: 1rem 0;
+            padding: 0.4rem 0;
+            min-width: 600px;
         }
 
         nav {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
+            min-width: 600px;
+            box-sizing: border-box;
+            margin: 0 auto; /* Change to margin: 0; to push flush against the browser's left edge */
             padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            justify-content: start;
             align-items: center;
+            column-gap: 16px;
+            row-gap: 4px;
         }
 
+        /* Left Column: Spans both rows */
+        .site-logo {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            display: block;
+            width: 54px;
+            height: 54px;
+            object-fit: contain;
+        }
+
+        /* Right Column, Row 1: Name/Title */
+        .site-title {
+            grid-column: 2;
+            grid-row: 1;
+            font-size: 1.4rem;
+            line-height: 1.15;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        /* Right Column, Row 2: Navigation Links */
         nav ul {
+            grid-column: 2;
+            grid-row: 2;
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
             gap: 20px;
+            line-height: 1.2;
         }
 
         nav a {
             text-decoration: none;
             color: var(--primary-accent);
             font-weight: bold;
+            white-space: nowrap;
         }
 
         nav a:hover, nav a:focus {
@@ -74,50 +109,79 @@
             outline: 3px solid var(--primary-accent);
             outline-offset: 4px;
         }
-        
-        /* Responsive Navigation for Mobile */
+
+        /* Responsive Adjustments for Mobile */
         @media (max-width: 768px) {
             nav {
-                /* Changes the logo and links from a row to a column */
-                flex-direction: column;
-                padding: 10px 0;
+                padding: 0 15px;
+                column-gap: 12px;
+                row-gap: 4px;
             }
 
-            .logo {
-                margin-bottom: 15px;
-                text-align: center;
-                font-size: 1.2rem; /* Slightly smaller for mobile screens */
+            .site-logo {
+                width: 48px;
+                height: 48px;
+            }
+
+            .site-title {
+                font-size: 1.2rem;
             }
 
             nav ul {
-                /* Allows links to wrap nicely or stack if needed */
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px; /* Adds space between wrapped links */
-                padding: 0;
+                gap: 6px 14px;
             }
 
             nav a {
-                padding: 5px 10px; /* Larger "tap targets" for fingers */
+                padding: 2px 4px;
             }
         }
-
+        
         main {
             max-width: 900px;
             margin: 2rem auto;
             padding: 0 20px;
         }
-
+        
         section { margin-bottom: 2.5rem; }
         h1, h2 { color: var(--primary-accent); }
 
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 0rem;
             font-size: 0.9rem;
             border-top: 1px solid #dee2e6;
             margin-top: 4rem;
         }
+        
+        .profile-container {
+                text-align: center;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+            }
+
+        .profile-pic {
+            /* Critical for Firefox: ensures the image behaves as a block-level container */
+            display: block;
+            margin: 0 auto; /* Centers the image since it's now a block */
+
+            /* Sizing */
+            width: 180px;
+            height: 180px;
+
+            /* The 'Circular' look */
+            border-radius: 50%;
+            
+            /* Ensures the image doesn't stretch */
+            object-fit: cover;
+            
+            /* Visual styling */
+            border: 4px solid var(--nav-bg);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+            /* Firefox Fix: ensures the overflow is actually hidden by the border-radius */
+            overflow: hidden;
+        }
+        
     </style>
 </head>
 <body>
@@ -126,23 +190,30 @@
 
     <header role="banner">
         <nav aria-label="Main Navigation">
-            <div class="logo"><strong>Professor Nathaniel E. Helwig</strong></div>
+            <!-- Spans both rows on the left; update src to match your file in pics/ -->
+            <img src="pics/helwig_logo.png" alt="" class="site-logo">
+            
+            <div class="site-title">
+                <strong>Professor Nathaniel E. Helwig</strong>
+            </div>
+            
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contribute.html">Contribute</a></li>
-                <li><a href="helwig_cv.pdf">CV</a></li>                
+                <li><a href="helwig_cv.pdf">CV</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
             </ul>
         </nav>
     </header>
 
+
     <main id="main-content">
         <h1>Grant Support</h1>
         
         <section aria-labelledby="funding-impact">
-        <h2 id="software-impact">Funding Impact</h2>
+        <h2 id="funding-impact">Funding Impact</h2>
         <div class="w3-display-container mySlides" style="text-align: center;">
             <img src="pics/helwig_funding.png" alt="Nathaniel E. Helwig's grant funding by year." style="width:100%">
          </div>
